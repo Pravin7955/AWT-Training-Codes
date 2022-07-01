@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Transforms</title>
+    <style>
+        body {
+            background-color: rgb(230, 227, 227);
+        }
+
+        #heading {
+            color: rgb(73, 35, 35);
+            text-shadow: 4px 4px 6px white;
+            font-size: 35px;
+            margin-bottom: 50px;
+        }
+
+        #heading:hover {
+            transition: 2s;
+            transform: skew(10deg);
+            text-shadow: 3px 3px 3px rgb(240, 136, 136);
+        }
+
+        .blockBody {
+            box-shadow: 4px 4px 8px 6px gray;
+            background-color: rgb(184, 184, 184);
+            padding: 25px;
+            margin: 20px 85px;
+            text-align: center;
+        }
+
+        .container {
+            border: 2px solid black;
+            display: inline-block;
+            height: 110px;
+            width: 110px;
+            margin: 50px;
+            background-color: rgb(129, 129, 129);
+            transition: 2s;
+        }
+
+        .inlineI {
+            display: block;
+            color: rgb(255, 0, 0);
+            font-size: 45px;
+            height: 50px;
+            width: 50px;
+            margin: 15px auto;
+        }
+
+        p {
+            display: block;
+            color: brown;
+            width: auto;
+            text-align: center;
+            font-size: large;
+            margin: 12px auto;
+        }
+
+        #TranslateDiv:hover {
+            -webkit-transform: translate(20px, 20px);
+            -moz-transform: translate(20px, 20px);
+            -ms-transform: translate(20px, 20px);
+            -o-transform: translate(20px, 20px);
+            transform: translate(20px, 20px);
+            background-color: rgb(238, 238, 238);
+        }
+
+        #RotateDiv:hover {
+            transform: rotate(360deg);
+            background-color: rgb(238, 238, 238);
+        }
+
+        #RotateDiv3D:hover {
+            transform: rotate3d(1, 1, 1, 360deg);
+            background-color: rgb(238, 238, 238);
+        }
+
+        #SkewDiv:hover {
+            transform: skew(30deg);
+            background-color: rgb(238, 238, 238);
+        }
+
+        #ScaleDiv:hover {
+            transform: scale(2, 2);
+            background-color: rgb(238, 238, 238);
+        }
+
+        #MatrixDiv:hover {
+            transform: matrix(1.2, -0.5, 0, 1.2, 10, 30);
+            background-color: rgb(238, 238, 238);
+        }
+
+        #RGBADiv:hover {
+            background: rgba(255, 0, 0, 0.35);
+        }
+
+        #BoxShadowDiv:hover {
+            box-shadow: 3px 3px 8px 4px brown;
+            background-color: rgb(238, 238, 238);
+        }
+
+        #TextShadowDiv:hover {
+            text-shadow: 4px 4px 6px brown;
+            background-color: rgb(238, 238, 238);
+        }
+
+        #BorderRadiusDiv:hover {
+            border-radius: 35px;
+            background-color: rgb(238, 238, 238);
+        }
+
+        #OverFlowDiv:hover {
+            overflow: hidden;
+            background-color: rgb(238, 238, 238);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blockBody">
+        <h1 id="heading">Awesome font | Hover | Transforms</h1>
+        <hr style="margin-bottom: 25px;">
+        <div id="TranslateDiv" class="container">
+            <i class="fa fa-toggle-right inlineI"></i>
+            <p>Translate</p>
+        </div>
+        <div id="RotateDiv" class="container">
+            <i class="fa fa-toggle-right inlineI"></i>
+            <p>Rotate</p>
+        </div>
+        <div id="RotateDiv3D" class="container">
+            <i class="fa fa-toggle-right inlineI"></i>
+            <p>Rotate 3D</p>
+        </div>
+        <div id="SkewDiv" class="container">
+            <i class="fa fa-toggle-right inlineI"></i>
+            <p>Skew</p>
+        </div>
+        <div id="ScaleDiv" class="container">
+            <i class="fa fa-toggle-right inlineI"></i>
+            <p>Scale</p>
+        </div>
+        <div id="MatrixDiv" class="container">
+            <i class="fa fa-toggle-right inlineI"></i>
+            <p>Matrix</p>
+        </div>
+        <div id="RGBADiv" class="container">
+            <i class="fa fa-toggle-right inlineI"></i>
+            <p>RGBA</p>
+        </div>
+        <div id="BoxShadowDiv" class="container">
+            <i class="fa fa-toggle-right inlineI"></i>
+            <p>BoxShadow</p>
+        </div>
+        <div id="TextShadowDiv" class="container">
+            <i class="fa fa-toggle-right inlineI"></i>
+            <p>TextShadow</p>
+        </div>
+        <div id="BorderRadiusDiv" class="container">
+            <i class="fa fa-toggle-right inlineI"></i>
+            <p>BorderRadius</p>
+        </div>
+        <div id="OverFlowDiv" class="container">
+            <i class="fa fa-toggle-right inlineI"></i>
+            <p>OverFlow OverFlow OverFlow</p>
+        </div>
+
+        <footer>
+            <hr style="margin-top: 50px;">
+            <p style="text-align: right; margin-right: 30px; text-shadow: 1px 1px 2px red;">Made by Pravin</p>
+        </footer>
+    </div>
+</body>
+
+</html>
