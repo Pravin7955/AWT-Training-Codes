@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Grid Layout-2</title>
+<style>
+	* {
+		margin: 0%;
+		padding: 0%;
+		box-sizing: border-box;
+	}
+
+	.container {
+		display: grid;
+		height: auto;
+		padding: 30px 150px;
+		grid-template-columns: 1fr 3fr;
+		grid-template-rows: 2fr 4fr 10fr 1fr;
+		grid-gap: 15px;
+		background-color: rgb(216, 216, 216);
+	}
+	
+	#item1 {
+		background-color: gray;
+		grid-column: 1 / span 2;
+		font-size: 50px;
+	}
+	#item2 {
+		grid-column: 1 / 2;
+		grid-row: 2 / 4;
+		font-size: 45px;
+	}
+	#item3 {
+		grid-column: 2 / 3;
+		background-color: gray;
+		font-size: 40px;
+		text-align: center;
+	}
+	#item4 {
+		grid-column: 2 / 3;
+		background-color: gray;
+		font-size: 40px;
+		text-align: center;
+	}
+	#item5 {
+		grid-column: 1 / span 2;
+		background-color: gray;
+		font-size: 40px;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<div id="item1"> Logo </div>
+	<div id="item2"> side bar Navigation </div>
+	<div id="item3"> Header / Banner </div>
+	<div id="item4"> Body Area </div>
+	<div id="item5"> Footer </div>
+</div>
+</body>
+</html>

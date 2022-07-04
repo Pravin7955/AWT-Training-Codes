@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title>Grid Layout-4</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            height: auto;
+            padding: 30px 150px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 3fr repeat(4, 5fr) 7fr 1fr;
+            grid-gap: 30px;
+            background-color: rgb(216, 216, 216);
+        }
+
+        #item1 {
+            background-color: gray;
+            grid-column: 1 / span 12;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .box2{
+            background-color: gray;
+            grid-column: 1 / 4;
+        }
+        .box3{
+            background-color: gray;
+            grid-column: 4 / 7;
+        }
+        .box4{
+            background-color: gray;
+            grid-column: 7 / 10;
+        }
+        .box5{
+            background-color: gray;
+            grid-column: 10 / 13;
+        }
+
+        #item2 {
+            background-color: gray;
+            grid-column: 1 / 5;
+            font-size: 45px;
+            text-align: center;
+        }
+
+        #item3 {
+            background-color: gray;
+            grid-column: 5 / 9;
+            font-size: 45px;
+            text-align: center;
+        }
+
+        #item4 {
+            background-color: gray;
+            grid-column: 9 / 13;
+            font-size: 45px;
+            text-align: center;
+        }
+
+        #item5 {
+            background-color: gray;
+            grid-column: 1 / span 12;
+            font-size: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="item1"> Logo and Navigation</div>
+        <!-- <div id="item2"> -->
+                <div class="box2"></div>
+                <div class="box3"></div>
+                <div class="box4"></div>
+                <div class="box5"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+                <div class="box4"></div>
+                <div class="box5"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+                <div class="box4"></div>
+                <div class="box5"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+                <div class="box4"></div>
+                <div class="box5"></div>
+        <!-- </div> -->
+        <div id="item2"> Box 1 </div>
+        <div id="item3"> Box 2 </div>
+        <div id="item4"> Box 3 </div>
+        <div id="item5"> Footer </div>
+    </div>
+</body>
+
+</html>
