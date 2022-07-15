@@ -1,34 +1,145 @@
 <html>
-    <head>
-        <title>Day-15||JQuery</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    </head>
-    <body>
-        <input type="text" id="focusId" placeholder="Focus text area"><br><br>
-        <input type="text" id="blurId" placeholder="Blur text area"><br><br>
-        <input type="text" id="keypressId" placeholder="KeyPress text area"><br><br>
-        <input type="text" id="keyupId" placeholder="KeyUp text area"><br><br>
 
-        <script>
-            $(document).ready(function(){
-                alert("page Loaded");
+<head>
+    <title>Day-15||JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
 
-                $("#focusId").focus(function() {
-                    $(this).css("backgroundColor","red");
-                });
+        body {
+            height: 100vh;
+        }
 
-                $("#blurId").blur(function() {
-                    $(this).css("backgroundColor","yellow");
-                });
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
 
-                $("#keypressId").keypress(function() {
-                    alert($(this).val());
-                });
-3
-                $("#keyupId").keyup(function() {
-                    alert($(this).val());
-                });
+        h2 {
+            margin-bottom: 10%;
+            font-size: 40px;
+            padding: 10px;
+            border-bottom: 2px solid red;
+            text-shadow: 1px 1px 6px aqua;
+        }
+
+        .container input {
+            margin: 10px;
+            padding: 7px;
+            border-radius: 5px;
+            background-color: aqua;
+            box-shadow: 1px 1px 4px 2px gray;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        /* Dark theme toggle switch  */
+        .dark {
+            margin-top: 5px;
+        }
+
+        .dark input {
+            opacity: 0%;
+            overflow: hidden;
+            border: 2px solid;
+        }
+
+        .dark label {
+            border: 1px solid gray;
+            background-color: aliceblue;
+            border-radius: 15px;
+            height: 20px;
+            width: 35px;
+            margin: 5px 5px;
+            padding: 0px 2px;
+            padding-bottom: 1px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #circle {
+            position: absolute;
+            font-size: 17px;
+            transition: 0.3s;
+            color: gray;
+        }
+
+        #sun {
+            font-size: 13px;
+            color: rgb(253, 203, 66);
+        }
+        
+        #moon {
+            font-size: 13px;
+            color: rgb(78, 78, 255);
+        }
+        
+        .toggle {
+            transform: translate(15px);
+        }
+
+        /* Background theme */
+        .theme {
+            background-color: rgb(41, 41, 41);
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Dark theme Toggle Switch  -->
+    <div class="dark">
+        <input type="checkbox" id="checkbox" onclick="checkbox()">
+        <label for="checkbox">
+            <i id="circle" class="fa fa-circle"></i>
+            <i id="moon" class="fa fa-moon-o"></i>
+            <i id="sun" class="fa fa-sun-o"></i>
+        </label>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+        <h2>JQuery Example</h2>
+        <input type="text" id="focusId" placeholder="Focus text area">
+        <input type="text" id="blurId" placeholder="Blur text area">
+        <input type="text" id="keypressId" placeholder="KeyPress text area">
+        <input type="text" id="keyupId" placeholder="KeyUp text area">
+    </div>
+
+    <script>
+        function checkbox() {
+            document.getElementById("circle").classList.toggle("toggle");
+            document.body.classList.toggle("theme");
+        };
+
+        $(document).ready(function () {
+            // alert("page Loaded");
+
+            $("#focusId").focus(function () {
+                $(this).css("backgroundColor", "rgb(211, 211, 211)");
             });
-        </script>
-    </body>
+
+            $("#blurId").blur(function () {
+                $(this).css("backgroundColor", "yellow");
+            });
+
+            $("#keypressId").keypress(function () {
+                alert($(this).val());
+            });
+            3
+            $("#keyupId").keyup(function () {
+                alert($(this).val());
+            });
+        });
+    </script>
+</body>
+
 </html>
