@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>Show || Hide || Atribute</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .container {
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            margin: 5px;
+            transition: 0.5s;
+        }
+
+        button {
+            margin-left: 20px;
+            font-size: 20px;
+            padding: 5px;
+            box-shadow: 1px 1px 4px 2px gray;
+        }
+
+        #plus {
+            position: absolute;
+            top: 5px;
+            right: 50px;
+        }
+        #minus {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" class="container"></div>
+    <br>
+    <hr><br>
+    <button id="hide">Hide</button>
+    <button id="show" disabled>Show</button>
+    <button id="toggle">Hide</button>
+    <button id="plus"><i class="fa-solid fa-plus"></i></button>
+    <button id="minus"><i class="fa-solid fa-minus"></i></button>
+
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                let c = confirm("Are you Sure?");
+                if (c == true) {
+                    $("#box").hide(800);
+                    $("#hide").prop('disabled', true);
+                    $("#show").prop('disabled', false);
+                }
+            });
+            $("#show").click(function () {
+                let c = confirm("Are you Sure?");
+                if (c == true) {
+                    $("#box").show(800);
+                    $("#hide").prop('disabled', false);
+                    $("#show").prop('disabled', true);
+                }
+            });
+
+            let a = 0;
+            $("#toggle").click(function () {
+                $("#box").toggle(800);
+                if (a == 0) {
+                    $("#toggle").html('Show');
+                    a = 1;
+                }
+                else {
+                    $("#toggle").html('Hide');
+                    a = 0;
+                }
+            });
+
+            $("#plus").click(function () {
+                if ($("#box").width() <= 500) {
+                    $('#box').width($('#box').width() + 20);
+                    $('#box').height($('#box').height() + 20);
+                }
+            });
+
+            $("#minus").click(function () {
+                if ($("#box").width() >= 100) {
+                    $('#box').width($('#box').width() - 20);
+                    $('#box').height($('#box').height() - 20);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
