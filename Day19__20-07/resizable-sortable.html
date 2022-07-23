@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <title>Resizable || Sortable</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    <style>
+        .resize {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border: 2px solid black;
+        }
+
+        .resizeText {
+            font-size: 1.1rem;
+            text-align: center;
+            color: white;
+        }
+
+        .mainContainer {
+            width: 100vw;
+        }
+
+        #firstContainer,
+        #secondContainer {
+            width: 80vw;
+            background-color: rgb(197, 197, 197);
+            margin: 10px auto;
+        }
+
+        #firstUl,
+        #secondUl {
+            padding: 10px 0px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item {
+            width: 90%;
+            margin: 10px auto;
+            background-color: gray;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- resizable div -->
+    <div id="resizableId" class="resize">
+        <p class="resizeText"> Resize me!!! </p>
+    </div>
+
+
+    <!-- sortable list -->
+    <div class="mainContainer">
+        <div id="firstContainer">
+            <ul id="firstUl">
+                <li class="item">Item A</li>
+                <li class="item">Item B</li>
+                <li class="item">Item C</li>
+                <li class="item">Item D</li>
+            </ul>
+        </div>
+        <div id="secondContainer">
+            <ul id="secondUl">
+                <li class="item">item a</li>
+                <li class="item">item b</li>
+                <li class="item">item c</li>
+                <li class="item">item d</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            // resizable script
+            $("#resizableId").resizable();
+            
+            
+            // sortable script
+            $("#firstUl").sortable({
+                connectWith:"#secondUl,#firstUl"
+            });
+            $("#secondUl").sortable({
+                connectWith:"#firstUl,#secondUl"
+            });
+
+        });
+    </script>
+</body>
+
+</html>
