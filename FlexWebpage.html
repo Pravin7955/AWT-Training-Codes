@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Using Flex</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(77, 77, 77);
+        }
+
+        /* header css */
+        nav {
+            height: 70px;
+            border-bottom: 1px solid black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 30px;
+            color: rgb(110, 221, 255);
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        .navItems ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .links {
+            margin: 0px 10px;
+            padding: 5px;
+            font-size: 25px;
+            color: azure;
+            border-bottom: 1px solid azure;
+        }
+
+        .links:hover {
+            border: 1px solid azure;
+        }
+
+        .btn {
+            font-size: 23px;
+            padding: 2px 10px;
+            background-color: gray;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* main container css */
+        .heading2 {
+            text-align: center;
+            margin: 10px;
+            color: rgb(110, 221, 255);
+            font-size: 35px;
+        }
+
+        .heading2 span {
+            color: white;
+        }
+
+        .container {
+            width: 80%;
+            margin: 25px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .heading4 {
+            margin: 10px;
+            color: rgb(110, 221, 255);
+            font-size: 25px;
+        }
+
+        .containerText {
+            width: 400px;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .pera {
+            margin: 10px;
+        }
+
+        .containerImage {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(143, 143, 143);
+            border-radius: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* image gallery css */
+        .imageGallery {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .imageBox {
+            height: 300px;
+            width: 300px;
+            margin: 5px;
+            background-color: rgb(143, 143, 143);
+            border-radius: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* footer css */
+        .hline {
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        .copyright {
+            text-align: center;
+            margin: 10px;
+            color: rgb(110, 221, 255);
+        }
+
+        .copyright span {
+            color: white;
+        }
+
+        /* Media query */
+        @media screen and (max-width: 800px) {
+            nav {
+                height: 130px;
+                flex-direction: column;
+            }
+            .container {
+                flex-direction: column-reverse;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            nav {
+                height: 300px;
+                flex-direction: column;
+            }
+            .navItems ul {
+                flex-direction: column;
+            }
+            .containerImage {
+                height: 300px;
+                width: 300px;
+            }
+            .containerText {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Flex<span>Box</span></div>
+            <div class="navItems">
+                <ul>
+                    <li class="links"><a>Services</a></li>
+                    <li class="links"><a>About</a></li>
+                    <li class="links"><a>Contact</a></li>
+                    <li class="links"><a>Faq</a></li>
+                    <li class="links"><button class="btn">SignIn</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="containerText">
+                <h4 class="heading4">About this <span>Page</span></h4>
+                <p class="pera">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus eius est excepturi
+                    odit quasi omnis debitis id ullam ipsam aut molestias voluptate dolore voluptas vitae ipsum maiores
+                    non nisi maxime reprehenderit, magni labore beatae.</p>
+                <button class="btn">More Info</button>
+            </div>
+            <div class="containerImage">
+                <img src="#" alt="Image">
+            </div>
+        </div>
+        <hr class="hline">
+        <div>
+            <h2 class="heading2">Image <span> Gallery</span></h2>
+            <div class="imageGallery">
+                <div class="imageBox"><img src="#" alt="Loading Image"></div>
+                <div class="imageBox"><img src="#" alt="Loading Image"></div>
+                <div class="imageBox"><img src="#" alt="Loading Image"></div>
+                <div class="imageBox"><img src="#" alt="Loading Image"></div>
+                <div class="imageBox"><img src="#" alt="Loading Image"></div>
+                <div class="imageBox"><img src="#" alt="Loading Image"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr class="hline">
+        <div class="copyright">Copyright &copy; 2022 || <span> All rights reserved</span></div>
+    </footer>
+</body>
+
+</html>
