@@ -25,7 +25,7 @@
 .selfContainer {
     width: 100%;
     height: 80vh;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     /* background-color: antiquewhite; */
     display: flex;
     justify-content: center;
@@ -37,35 +37,20 @@
     border: 1px solid gray;
     border-radius: 50px;
     box-shadow: 1px 1px 4px 2px gray;
+    background-color: rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.parallax1 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../test02-07.jpg);
-    width: 100%;
-    height: 100vh;
-}
-
-.parallax2 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../test02-07.jpg);
-    width: 100%;
-    height: 100vh;
-}
+/* .bg-black {
+    background-color: black;
+} */
 
 .selfImage {
-    height: 200px;
-    width: 150px;
+    height: 150px;
+    width: 120px;
     background-color: gray;
     border-radius: 10px;
     margin: 10px;
@@ -78,13 +63,105 @@
 .selfHeading {
     color: white;
     text-shadow: 2px 2px 2px gray;
-    margin: 10px;
+    margin: 5px;
+}
+
+.hline {
+    width: 80%;
+    color: white;
+}
+
+.phone-email {
+    width: 90%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .selfPera {
     color: white;
     margin: 10px 50px;
 }
+
+.socialIcons {
+    width: 50%;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.fa {
+    margin: 0px 20px;
+    font-size: 25px;
+}
+
+.fa-facebook {
+    color: #4267B2;
+}
+.fa-instagram {
+    color: #8a3ab9;
+}
+.fa-twitter {
+    color: #1DA1F2;
+}
+.fa-linkedin {
+    color: #0072b1;
+}
+
+.tsContainer {
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.parallax1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(Images_And_Videos/skills.jpg);
+    width: 100%;
+    height: auto;
+}
+
+.parallax2 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(Images_And_Videos/education.jpg);
+    width: 100%;
+    height: auto;
+}
+
+.eqDiv {
+    width: 100%;
+    height: auto;
+}
+
+.firstRow {
+    width: 100%;
+    height: auto;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: start;
+}
+
+.firstBox {
+    width: 500px;
+    height: 400px;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
 
 @media screen and (max-width: 991px) {
     .backgroundVideo {
